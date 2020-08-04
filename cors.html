@@ -2,7 +2,7 @@
 <html>
   <body>
     <script>
-      fetch('https://example.com')
+      fetch('https://example.com', {mode: 'no-cors'})
         .then(response => {
           console.log(response);
         })
