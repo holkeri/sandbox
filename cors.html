@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
   <body>
+    <div id="preview">Loading...</div>
     <script>
       fetch('https://example.com', {mode: 'no-cors'})
-        .then(response => {
-          console.log(response);
-        })
+        .then(response => response.text())
+        .then(content => {
+          console.log(content);
+          document.getElementById("preview").innerHTML = content;
+          });
     </script>
   </body>
 </html>
